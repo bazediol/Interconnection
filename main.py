@@ -58,7 +58,7 @@ def gateways (company, IPs):
     data = "\nnano /etc/opensips/db/dr_gateways\n\n"
     for IP in IPs:
         #data += "0:out-gwXXX:2:sip\:{}\:5060:0:::0:0::{}\n".format(IP, company)
-		data += "0:in-gwXXXX:1:sip\:{}\:5060:0::XXX:0:0::{}\n".format(IP, company)
+        data += "0:in-gwXXXX:1:sip\:{}\:5060:0::XXX:0:0::{}\n".format(IP, company)
     return data
 
 def iptables (company, IPs):
@@ -95,7 +95,7 @@ def portal_interconnection ():
     print 'Provide customer IPs'
     IPs = get_IP()
     data = 'Password is jimFR4unFErgh69%fbnDd\n'
-    data = server29 (company, IPs, trunks, 10) + server99  (IPs, company)
+    data += server29 (company, IPs, trunks, 10) + server99  (IPs, company)
     create_file (company, data)
 
 def standard_interconnectin ():
